@@ -17,6 +17,7 @@ var paths = map[string]string{
 	"taskmanager": `taskmgr`,
 	"editor":      `notepad`,
 	"explorer":    `explorer`,
+	"firefox":     `C:\Program Files\Mozilla Firefox\firefox.exe`,
 }
 var authPassword string
 var allowedClients []string

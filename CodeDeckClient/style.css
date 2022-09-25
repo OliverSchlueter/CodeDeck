@@ -1,0 +1,23 @@
+body{
+    background-color: #222;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.buttons button{
+    margin: 10px;
+    padding: 7px 15px;
+    background-color: #222;
+    color: rgb(11, 255, 255);
+    border: 1px solid rgb(0, 124, 108);
+    border-radius: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
