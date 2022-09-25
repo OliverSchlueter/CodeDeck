@@ -6,16 +6,25 @@
     <title>CodeDeck</title>
 </head>
 <body>
-    
-    <div class="buttons">
-        <button onclick="startProgram('firefox')">Firefox</button>
-        <button onclick="startProgram('vscode')">VSCode</button>
-        <button onclick="startProgram('editor')">Editor</button>
-        <button onclick="startProgram('calculator')">Calculator</button>
-        <button onclick="startProgram('explorer')">Explorer</button>
-        <button onclick="startProgram('taskmanager')">Taskmanger</button>
+    <div class="twoSides">
+        <form id="connectForm">
+            <h1>Websocket</h1>
+            <label for="ip">IP Adress</label>
+            <input type="text" id="ipField" placeholder="192.168.178.40" value="192.168.178.40">
+            <label for="password">Auth Password</label>
+            <input type="password" id="passwordField" placeholder="auth password">
+            <button type="submit">Connect</button>
+        </form>
+        
+        <div class="buttons">
+            <button onclick="startProgram('firefox')">Firefox</button>
+            <button onclick="startProgram('vscode')">VSCode</button>
+            <button onclick="startProgram('editor')">Editor</button>
+            <button onclick="startProgram('calculator')">Calculator</button>
+            <button onclick="startProgram('explorer')">Explorer</button>
+            <button onclick="startProgram('taskmanager')">Taskmanger</button>
+        </div>
     </div>
-
     <script src="index.js"></script>
 </body>
 </html>

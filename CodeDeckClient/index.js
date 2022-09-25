@@ -1,16 +1,33 @@
-const ws = new WebSocket("ws://192.168.178.40:1337/codedeck");
+document.getElementById("connectForm").onsubmit = () => {
+    pwd = document.getElementById("passwordField").value;
+    ip = document.getElementById("ipField").value;
 
-ws.addEventListener("open", (event) => {
-    ws.send("auth abc");
+    console.log("pwd: " + pwd);
+    console.log("ip: " + ip);
 
-    console.log("connected to server");
-});
+    connectToWS(ip, pwd);
 
-ws.addEventListener("message", (event) => {
-    console.log("message from server: " + event.data);
-});
-
+    return false;
+}
 
 function startProgram(program){
     ws.send("run " + program)
+}
+
+
+let ws;
+
+function connectToWS(ip, pwd){
+    ws = new WebSocket("ws://"+ip+":1337/codedeck");
+
+    ws.addEventListener("open", (event) => {
+        ws.send("auth " + pwd);
+    
+        window.alert("Connected to server")
+        console.log("connected to server");
+    });
+    
+    ws.addEventListener("message", (event) => {
+        console.log("message from server: " + event.data);
+    });
 }
